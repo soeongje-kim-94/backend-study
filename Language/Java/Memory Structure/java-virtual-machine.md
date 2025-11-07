@@ -11,7 +11,7 @@
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm.jpg?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm.jpg?raw=true)
 
 &nbsp;
 &nbsp;
@@ -30,7 +30,7 @@
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_compiler.jpg?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm_compiler.jpg?raw=true)
 
 &nbsp;
 &nbsp;
@@ -50,7 +50,7 @@
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_execution_engine.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm_execution_engine.png?raw=true)
 
 &nbsp;
 &nbsp;
@@ -71,7 +71,7 @@
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_rutime_data_area.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm_rutime_data_area.png?raw=true)
 
 &nbsp;
 &nbsp;
@@ -127,7 +127,7 @@ Java 이외 다른 언어의 함수 호출(예 : C/C++ 메서드)를 위해 할�
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_stack_area.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm_stack_area.png?raw=true)
 
 &nbsp;
 &nbsp;
@@ -147,7 +147,7 @@ Java에서는 이와 같이 더 이상 필요가 없어진 객체를 쓰레기�
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_gc.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jvm_gc.png?raw=true)
 
 &nbsp;
 &nbsp;
@@ -168,7 +168,7 @@ Mark 단계에서 GC Root(스택 프레임, 클래스 로더, JNI 레퍼런스 �
 &nbsp;
 &nbsp;
 
-![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jmv_heap.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Memory%20Structure/assets/jmv_heap.png?raw=true)
 
 &nbsp;
 &nbsp;
