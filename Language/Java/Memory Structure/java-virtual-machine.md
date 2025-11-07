@@ -186,3 +186,9 @@ Java 8 메모리 구조 개선 사항으로 PermGen은 Metaspace으로 대체되
 결과적으로 이전에 개발자가 PermGen을 확보하기 위해 직접 메모리 튜닝을 고민해야 했던 불편을 해결할 수 있게 되었다.
 
 추가적으로 정적(static) 변수의 값과 리터럴 상수를 힙 영역에 위치시켜, 최대한 CG의 대상이 될 수 있도록 변경되었다.
+
+&nbsp;
+
+## 🔍 내용 참조 및 출처
+ - https://aljjabaegi.tistory.com/387
+ - https://javarevisited.blogspot.com/2011/04/garbage-collection-in-java.html

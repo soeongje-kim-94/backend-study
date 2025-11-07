@@ -221,3 +221,9 @@ G1 GC는 CMS GC의 대안으로 고안되었으며, 성능이 매우 뛰어나�
 ​&nbsp;
 
 메모리를 바둑판처럼 각각의 영역(Region 단위)으로 구분하고, 각 Region에 Young/Old 영역 역할을 동적으로 할당하여 GC를 실행하는 방식으로 기존의 물리적으로 분리되어 Young/Old 영역에서 진행되었던 CG 처리를 한 영역 안에서 모두 진행한다.
+
+
+​&nbsp;
+
+## 🔍 내용 참조 및 출처
+ - https://d2.naver.com/helloworld/1329
