@@ -131,6 +131,8 @@ Young 영역은 다시 3개의 영역으로 구분된다.
 
 ​&nbsp;​
 &nbsp;
+​&nbsp;​
+&nbsp;
 ​
 ![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Garbage%20Collection/assets/java_gc_heap.png?raw=true)
 
@@ -138,6 +140,7 @@ Young 영역은 다시 3개의 영역으로 구분된다.
 &nbsp;
 
 이 과정을 'Promotion'이라고 한다.
+
 즉, Minor GC가 반복되면 Promotion도 계속 발생한다.
 
 ​&nbsp;
