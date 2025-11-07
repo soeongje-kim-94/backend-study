@@ -69,7 +69,7 @@
 
 ### ● 메서드 영역 (Method Area)
 
-JVM 시작시 생성되고 프로그램 종료 시까지 모든 스레드가 공유하는 영역이다. Metaspace(Java 8 이후 PermGen이 Metaspace로 대체됨)라고 표현하며, JVM 구동 중 사용될 클래스 파일들을 로드할때 클래스 메타데이터를 포함해 런타임 상수 풀, 정적(static) 변수 등을 저장한다.
+JVM 시작시 생성되고 프로그램 종료 시까지 모든 스레드가 공유하는 영역이다. Metaspace(HotSpot VM 기준, Java 8 이후 PermGen이 Metaspace로 대체됨)라고 표현하며, JVM 구동 중 사용될 클래스 파일들을 로드할때 클래스 메타데이터를 포함해 런타임 상수 풀, 정적(static) 변수 등을 저장한다.
 
 &nbsp;
 
@@ -131,4 +131,27 @@ JVM의 힙 영역에는 객체들이 할당되는데, 이는 각 객체가 메�
 
 GC는 쓰레기 객체(참조되지 않는 객체, Unreachable Object)를 우선적으로 메모리에서 제거함으로써 메모리 공간을 확보한다. 이 과정은 간단하게 'Mark and Sweep'으로 표현한다.
 
-Mark 단계에서 GC는 GC Root(스택 프레임, 클래스 로더, JNI 레퍼런스 등)에서부터 도달 가능한 객체들을 탐색하고 표시한다. 이 작업을 위해 모든 스레드는 일시 중단되는데, 그래서 이 작업을 'Stop the world' 라고 표현한다. 이후 Sweep 단계에서는 Marking되지 않은 모든 객체들을 힙 영역에서 제거한다.
+Mark 단계에서 GC는 GC Root(스택 프레임, 클래스 로더, JNI 레퍼런스 등)에서부터 도달 가능한 객체들을 탐색하고 표시한다. 이 작업을 위해 모든 스레드는 일시 중단되는데, 그래서 이 작업을 'Stop the world'라고 표현한다. 이후 Sweep 단계에서는 Marking되지 않은 모든 객체들을 힙 영역에서 제거한다.
+
+&nbsp;
+&nbsp;
+
+## Java 8 메모리 구조 개선 (Permanent Generation 제거)
+
+&nbsp;
+&nbsp;
+
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jmv_heap.png?raw=true)
+
+&nbsp;
+&nbsp;
+
+Java 8 이전 기준으로 힙 영역과 PermGen은 서로 격리되어 있지만, 이들이 사용하는 물리적 메모리는 연속적이다. 또한 종종 JVM에 의해 GC가 메서드 영역까지 확장됨으로써 GC의 대상에 포함되었다.
+
+이는 메모리 관리 측면에서 기존 PermGen이 JVM 자체 프로세스 내에 있었다는 것을 의미한다. 그래서 PermGen은 C-Heap이라고도 하는 JVM에 의해 관리되는 메모리 안에 포함되어 고정 크기로 할당되어 있었다.
+
+하지만 이 PermGen의 크기가 강제된다는 점으로 인해 힙 영역의 상한이 제한되고, 메모리 누수 문제까지 연결될 수 있는 위험성이 존재했다.
+
+Java 8 메모리 구조 개선 사항으로 PermGen은 Metaspace으로 대체되었고, JVM이 아닌 OS 레벨에서 관리하는 네이티브 영역에 포함되도록 변경되었다. 따라서 기존 PermGen의 정보를 OS 레벨에서 관리함으로써 더 이상 고정 크기가 아닌 동적으로 크기를 조절할 수 있게 되었다. 즉, 변경될 가능성이 아주 적은 여러 메타 정보들을 OS가 관리하는 영역으로 옮겨 PermGen의 크기 제한을 없앤 것이다. 결과적으로 이전에 개발자가 PermGen을 확보하기 위해 직접 메모리 튜닝을 고민해야 했던 불편을 해결할 수 있게 되었다.
+
+추가적으로 정적(static) 변수의 값과 리터럴 상수를 힙 영역에 위치시켜, 최대한 CG의 대상이 될 수 있도록 변경되었다.
