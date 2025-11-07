@@ -16,8 +16,6 @@
 
 ## JVM의 구조 및 컴파일 과정
 
-&nbsp;
-
 컴파일 관점에서 JVM은 크게 클래스 로더(Class Loader), 실행 엔진(Execution Engine), 런타임 데이터 영역(Runtime Data Area)으로 구성된다.
 
 &nbsp;
@@ -116,8 +114,6 @@ Java 이외 다른 언어의 함수 호출(예 : C/C++ 메서드)를 위해 할�
 &nbsp;
 
 ## 가비지 콜렉터 (Garbage Collector, GC)
-
-&nbsp;
 
 GC는 Java의 중요한 메모리 관리 도구이다.
 
