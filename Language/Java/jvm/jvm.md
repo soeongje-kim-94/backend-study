@@ -1,4 +1,4 @@
-# JVM(Java Virtual Machine)
+# JVM (Java Virtual Machine)
 
 &nbsp;
 
@@ -44,7 +44,9 @@
 
 &nbsp;
 &nbsp;
+
 ![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/jvm/assets/jvm_execution_engine.png?raw=true)
+
 &nbsp;
 &nbsp;
 
