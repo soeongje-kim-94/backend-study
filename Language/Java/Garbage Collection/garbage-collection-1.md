@@ -111,7 +111,7 @@ Young 영역은 다시 3개의 영역으로 구분된다.
 ​&nbsp;
 ​&nbsp;
 
-​![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Garbage%20Collection/assets/java_gc_minor.png?raw=true)
+![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Garbage%20Collection/assets/java_gc_minor.png?raw=true)
 
 ​&nbsp;
 ​&nbsp;
@@ -131,9 +131,7 @@ Young 영역은 다시 3개의 영역으로 구분된다.
 
 ​&nbsp;​
 &nbsp;
-​&nbsp;​
-&nbsp;
-​
+
 ![](https://github.com/soeongje-kim-94/backend-study/blob/main/Language/Java/Garbage%20Collection/assets/java_gc_heap.png?raw=true)
 
 &nbsp;​
