@@ -39,7 +39,7 @@ JVM은 GC를 실행하기 위해서 애플리케이션(GC를 실행하는 스레
 
 &nbsp;
 
-## 힙 영역의 구조​
+## ✅ 힙 영역의 구조​
 
 GC는 'Weak Generational Hypothesis'라고 불리는 아래의 전제 조건을 바탕으로 탄생했다.
 
@@ -94,7 +94,7 @@ Minor GC를 실행하는 경우, Old 영역 내 모든 객체의 참조를 확�
 
 &nbsp;
 
-## Young 영역의 GC (Minor GC)
+## ✅ Young 영역의 GC (Minor GC)
 
 Young 영역은 다시 3개의 영역으로 구분된다.
 
@@ -143,7 +143,7 @@ Young 영역은 다시 3개의 영역으로 구분된다.
 
 ​&nbsp;
 
-## Old 영역의 GC (Major GC)
+## ✅ Old 영역의 GC (Major GC)
 
 이제 Minor GC와 Promotion 작업이 반복되면서 Old 영역이 가득 차게 되면 Major GC가 발생한다.
 Major GC는 다양한 GC 수행 방식에 따라 절차가 달라지며, 이 과정은 Minor GC와 비교하여 수행 시간(STW)이 매우 길다.
